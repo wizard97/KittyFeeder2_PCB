@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 1915)
+    (start_pass_no 1331)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -40,6 +40,21 @@
     )
     (attach off)
   )
+  (padstack "Via[0-1]_2000:500_um"
+    (shape
+      (circle F.Cu 2000.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 2000.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_2000:500_um" "Via[0-1]_2000:500_um" default
+  )
+  (via 
+    "Via[0-1]_2000:500_um-kicad_default" "Via[0-1]_2000:500_um" "kicad_default"
+  )
   (via 
     "Via[0-1]_600:400_um" "Via[0-1]_600:400_um" default
   )
@@ -65,18 +80,18 @@
   (class "kicad_default"
     "/PIEZO_H" "/PIEZO_L" "GND_IN" "Net-(D1-Pad4)" "Net-(D1-Pad5)" "Net-(D1-Pad6)" "Net-(D2-Pad4)" "Net-(D2-Pad5)"
     "Net-(D2-Pad6)" "5V_IN" "Net-(DS1-Pad3)" "/LCD_RS" "/LCD_EN" "Net-(DS1-Pad7)" "Net-(DS1-Pad8)" "Net-(DS1-Pad9)"
-    "Net-(DS1-Pad10)" "/LCD_D4" "/LCD_D5" "/LCD_D6" "/LCD_D7" "Net-(DS1-Pad15)" "/ESP_RX" "Net-(J1-Pad2)"
-    "Net-(J1-Pad3)" "/ESP_TX" "/ESP_CH" "/ESP_RST" "3V3_IN" "12V_IN" "/COOLER_VSS" "/TEMP_DATA"
-    "Net-(J3-Pad3)" "/SERVO_1" "/SERVO_2" "Net-(Q1-Pad2)" "/LED1_R" "/LED1_G" "/LED1_B" "/B_UP"
-    "/B_SEL" "/B_RIGHT" "/B_DOWN" "/B_LEFT" "/LED2_R" "/LED2_G" "/LED2_B" "Net-(ARD1-PadD18)"
-    "/COOLER_PWM" "PWR_ENABLE" /SDA /SCL "Net-(ARD1-PadRST2)" "Net-(ARD1-PadMOSI)" "Net-(ARD1-PadSCK)" "Net-(ARD1-Pad5V2)"
-    "Net-(ARD1-PadVIN)" "Net-(ARD1-Pad3.3V)" "Net-(ARD1-PadRST1)" "Net-(ARD1-PadIORF)" "Net-(ARD1-PadD17)" "Net-(ARD1-PadD16)" "Net-(ARD1-PadD15)" "Net-(ARD1-PadD14)"
-    "Net-(ARD1-PadD0)" "Net-(ARD1-PadD1)" "Net-(ARD1-PadD2)" "Net-(ARD1-PadD4)" "Net-(ARD1-PadSCL)" "Net-(ARD1-PadSDA)" "Net-(ARD1-PadAREF)" "Net-(ARD1-PadD13)"
-    "Net-(ARD1-PadA2)" "Net-(ARD1-PadA3)" "Net-(ARD1-PadA4)" "Net-(ARD1-PadA5)" "Net-(ARD1-PadA6)" "Net-(ARD1-PadA7)" "Net-(ARD1-PadA13)" "Net-(ARD1-PadA14)"
-    "Net-(ARD1-PadA15)" "Net-(ARD1-PadD28)" "Net-(ARD1-PadD29)" "Net-(ARD1-PadD30)" "Net-(ARD1-PadD31)" "Net-(ARD1-PadD32)" "Net-(ARD1-PadD33)" "Net-(ARD1-PadD34)"
-    "Net-(ARD1-PadD35)" "Net-(ARD1-PadD36)" "Net-(ARD1-PadD37)" "Net-(ARD1-PadD38)" "Net-(ARD1-PadD39)" "Net-(ARD1-PadD40)" "Net-(ARD1-PadD41)" "Net-(ARD1-PadD42)"
-    "Net-(ARD1-PadD43)" "Net-(ARD1-PadD47)" "Net-(ARD1-PadD48)" "Net-(ARD1-PadD49)" "Net-(ARD1-PadD50)" "Net-(ARD1-PadD51)" "Net-(ARD1-PadD52)" "Net-(ARD1-PadD53)"
-    "Net-(ARD1-PadMISO)"
+    "Net-(DS1-Pad10)" "/LCD_D4" "/LCD_D5" "/LCD_D6" "/LCD_D7" "Net-(DS1-Pad15)" "/ESP_RX" "/ESP_TX"
+    "/ESP_CH" "/ESP_RST" "3V3_IN" "12V_IN" "/COOLER_VSS" "/TEMP_DATA" "Net-(J3-Pad3)" "/SERVO_1"
+    "/SERVO_2" "Net-(Q1-Pad2)" "/LED1_R" "/LED1_G" "/LED1_B" "/B_UP" "/B_SEL" "/B_RIGHT"
+    "/B_DOWN" "/B_LEFT" "/LED2_R" "/LED2_G" "/LED2_B" "Net-(ARD1-PadD18)" "/COOLER_PWM" "PWR_ENABLE"
+    /SDA /SCL "Net-(ARD1-PadRST2)" "Net-(ARD1-PadMOSI)" "Net-(ARD1-PadSCK)" "Net-(ARD1-Pad5V2)" "Net-(ARD1-PadVIN)" "Net-(ARD1-Pad3.3V)"
+    "Net-(ARD1-PadRST1)" "Net-(ARD1-PadIORF)" "Net-(ARD1-PadD17)" "Net-(ARD1-PadD16)" "Net-(ARD1-PadD15)" "Net-(ARD1-PadD14)" "Net-(ARD1-PadD0)" "Net-(ARD1-PadD1)"
+    "Net-(ARD1-PadD2)" "Net-(ARD1-PadD4)" "Net-(ARD1-PadSCL)" "Net-(ARD1-PadSDA)" "Net-(ARD1-PadAREF)" "Net-(ARD1-PadD13)" "Net-(ARD1-PadA2)" "Net-(ARD1-PadA3)"
+    "Net-(ARD1-PadA4)" "Net-(ARD1-PadA5)" "Net-(ARD1-PadA6)" "Net-(ARD1-PadA7)" "Net-(ARD1-PadA13)" "Net-(ARD1-PadA14)" "Net-(ARD1-PadA15)" "Net-(ARD1-PadD28)"
+    "Net-(ARD1-PadD29)" "Net-(ARD1-PadD30)" "Net-(ARD1-PadD31)" "Net-(ARD1-PadD32)" "Net-(ARD1-PadD33)" "Net-(ARD1-PadD34)" "Net-(ARD1-PadD35)" "Net-(ARD1-PadD36)"
+    "Net-(ARD1-PadD37)" "Net-(ARD1-PadD38)" "Net-(ARD1-PadD39)" "Net-(ARD1-PadD40)" "Net-(ARD1-PadD41)" "Net-(ARD1-PadD42)" "Net-(ARD1-PadD43)" "Net-(ARD1-PadD47)"
+    "Net-(ARD1-PadD48)" "Net-(ARD1-PadD49)" "Net-(ARD1-PadD50)" "Net-(ARD1-PadD51)" "Net-(ARD1-PadD52)" "Net-(ARD1-PadD53)" "Net-(ARD1-PadMISO)" "Net-(J1-Pad4)"
+    "Net-(J1-Pad6)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
